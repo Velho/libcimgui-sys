@@ -52,3 +52,8 @@ Linux **TBD**
 
     `cargo build`
 
+## Bindings
+
+To generate the cImGui bindings, run the bindgen tool against wrapper header.
+
+`bindgen .\wrapper.h -o .\src\bindings.rs`

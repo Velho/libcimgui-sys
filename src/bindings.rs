@@ -26024,6 +26024,30 @@ extern "C" {
 extern "C" {
     pub fn ImGui_ImplSDL2_ProcessEvent(event: *const SDL_Event) -> bool;
 }
+extern "C" {
+    pub fn ImGui_ImplSDLRenderer_Init(renderer: *mut SDL_Renderer) -> bool;
+}
+extern "C" {
+    pub fn ImGui_ImplSDLRenderer_Shutdown();
+}
+extern "C" {
+    pub fn ImGui_ImplSDLRenderer_NewFrame();
+}
+extern "C" {
+    pub fn ImGui_ImplSDLRenderer_RenderDrawData(draw_data: *mut ImDrawData);
+}
+extern "C" {
+    pub fn ImGui_ImplSDLRenderer_CreateFontsTexture() -> bool;
+}
+extern "C" {
+    pub fn ImGui_ImplSDLRenderer_DestroyFontsTexture();
+}
+extern "C" {
+    pub fn ImGui_ImplSDLRenderer_CreateDeviceObjects() -> bool;
+}
+extern "C" {
+    pub fn ImGui_ImplSDLRenderer_DestroyDeviceObjects();
+}
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct __crt_locale_data {
