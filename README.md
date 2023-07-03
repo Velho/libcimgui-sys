@@ -7,6 +7,9 @@ This wrapper has been configured to make use of the SDL2 backend primarily, but 
 
 These bindings are generated using the documentation from <https://rust-lang.github.io/rust-bindgen/library-usage.html>
 
+Some changes are applied to cimgui, which can be found from <https://github.com/Velho/cimgui>
+Changes are related to the generator and additional backends used.
+
 ## Dependencies
 
 | | version |
