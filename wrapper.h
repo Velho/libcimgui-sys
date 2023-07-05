@@ -2,5 +2,6 @@
 #define CIMGUI_USE_SDL2
 #define CIMGUI_USE_SDLRENDERER
 
-#include "deps/cimgui/cimgui.h"
-#include "deps/cimgui/generator/output/cimgui_impl.h"
+#include "cimgui.h"
+#include "cimgui_impl.h"
+
