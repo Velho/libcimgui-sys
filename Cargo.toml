@@ -7,6 +7,8 @@ build = "build.rs"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+bitflags = "2.3.3"
+sdl2 = { path = "../rust-sdl2" }
 
 [build-dependencies]
 bindgen = "*"
