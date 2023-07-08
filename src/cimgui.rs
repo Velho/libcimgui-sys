@@ -127,9 +127,7 @@ impl IgSDL2Renderer {
     }
 
     fn _process_event(&self, evt: &mut sdl2::sys::SDL_Event) -> bool {
-        unsafe {
-            ImGui_ImplSDL2_ProcessEvent(std::mem::transmute(evt))
-        }
+        unsafe { ImGui_ImplSDL2_ProcessEvent(std::mem::transmute(evt)) }
     }
 
     /// Validates the event passed as parameter and,
@@ -148,17 +146,17 @@ impl IgSDL2Renderer {
     /// Note: There might be Events which the to_ll can't
     /// convert in this case, we'll return false.
     pub fn process_events(&self, event: Option<&Event>) -> bool {
-            if event.is_none() {
-                return false;
-            }
+        if event.is_none() {
+            return false;
+        }
 
-            let opt_event = &mut event.unwrap().to_ll();
-            // couple of different events which rust sdl2 can't convert
-            if opt_event.is_none() {
-                return false;
-            }
-            // process the correct event
-            self._process_event(&mut opt_event.unwrap())
+        let opt_event = &mut event.unwrap().to_ll();
+        // couple of different events which rust sdl2 can't convert
+        if opt_event.is_none() {
+            return false;
+        }
+        // process the correct event
+        self._process_event(&mut opt_event.unwrap())
     }
 
     pub fn new_frame(&self) {
